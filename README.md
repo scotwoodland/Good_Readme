@@ -1,23 +1,19 @@
 # GoodReadme_Generator
   
   ## Description 
-  A command line application that generates a professional README.md from the user's input using Node.
+  Using Node, this application creates a basic README file based upon user answers from input questions presented. The README file name is user generated and allows for multiple sections to be introduced into the README. The file uses the node module "require" which is included in the "node modules" folder. 
   ## Installation
-  Having Node installed, write "npm i" into the command line to install all dependencies."
+  Begin by installing Node using Terminal. Then, further install the nodes by typing in "npm init" and then "npm install require". 
   ## Usage
-  User answers prompt questions.  The input data is then used to generate a professional readme document for projects.
-  - Requires inquirer. Using inquirers type,name, and message, I set up the prompts to get the information needed to create a professional readme.
+ To run, type "node index.js" in the terminal line. The terminal will return a series of questions to answer. (To leave a line blank, simply press 'enter'.)
  
- ![](Images/Inquirer_prompts.png)
+ ![](Images/NodeCommandLines.JPG)
  
- - Requires fs.  On lines 16, the var filename take the title data from the prompt that asks for the project title, makes it all lower case, takes any extraneuos spaces and joins them, then creates a ".md" file.
- - The data is then taken from the generateMarkdown.js file, that contains the markdown for the readme file with the users added input data to dynamically generate the read me.
- 
- ![](Images/fswritefile.png)
- 
- - Requires util (can be seen above in first image).  This is the markdown layed out for the readme.  Using template literals, it grabs the users answers from the prompt questions and inserts them into the readme in their designated location.
- 
- ![](Images/markdown.png)
+ ![](Images/READMEScreenshot.JPG)
+
+[Github Repository:](https://github.com/scotwoodland/Good_Readme/)
+
+[Video Demonstration:](https://drive.google.com/file/d/1KKC_uEVCvuL2_VMvJH1H7SgUFHtxVrtl/view)
  
   ## License
   MIT
