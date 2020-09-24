@@ -1,28 +1,29 @@
+// Setup variables for the README 
 const inquirer = require("inquirer");
 const fs = require('fs');
 const generateMarkdown = require("./utils/generateMarkdown");
-// array of questions for user
 
+// Setup questions to be asked in node by putting everything into a single array
 const userQuestions = [
     {
         type: "input",
-        name: "title",
-        message: "What is your project title?"
+        name: "name",
+        message: "What is your webpage name?"
     },
     {
         type: "input",
         name: "description",
-        message: "Give a description of the project."
+        message: "Give a description of your webpage."
     },
     {
         type: "input",
         name: "installation",
-        message: "Describe the installation process for this project."
+        message: "Describe your installation process for this webpage."
     },
     {
         type: "input",
         name: "usage",
-        message: "How do you use the project?"
+        message: "How do you use your webpage?"
     },
     {
         type: "list",
@@ -55,12 +56,17 @@ const userQuestions = [
         name: "email",
         message: "What is your e-mail??"
     },
+    {
+        type: "input",
+        name: "thumbnail",
+        message: "What is the path for your thumbnail?"
+    },
 ]
 //Function that writes the readme file.
 inquirer.prompt(userQuestions)
     .then(function (data) {
 
-        var filename = data.title.toLowerCase().split(' ').join('') + ".md";
+        var filename = data.name.toLowerCase().split(' ').join('') + ".md";
 
         fs.writeFile(filename, generateMarkdown(data), function (err) {
 
